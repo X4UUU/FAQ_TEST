@@ -26,7 +26,7 @@ $output = [
     'postData' => $_POST, # 除錯用
     'error' => '欄位資料不足',
     'code' => 0, # 除錯或追踪程式碼
-  ];
+];
 
 //抓出所有faq並以降冪排序
 $sql = "SELECT * FROM faq_shopinfo ORDER BY question_id DESC";
@@ -56,7 +56,7 @@ $faqs = $statement->fetchAll();
         <div class="offset-md-3 col-md-6">
             <h1 class="text-center">新增商城常見問題</h1>
             <!-- for to add FAQ -->
-            <form method="POST" action="add_faq.php">
+            <form method="POST" action="faq_add.php">
                 <!-- 問題 -->
                 <div class="form-group mb-3">
                     <label>輸入問題</label>
@@ -69,15 +69,13 @@ $faqs = $statement->fetchAll();
                 </div>
                 <!-- 提交按鈕 -->
                 <input type="submit" name="submit" class="btn btn-info" value="新增 FAQ" />
-                <a href="index_faq.php" class="btn btn-info">預覽前台</a>
+                <a href="faq_index.php" class="btn btn-info">預覽前台</a>
             </form>
         </div>
     </div>
-<style>
-    tbody{
-        
-    }
-</style>
+    <style>
+        /* tbody {} */
+    </style>
     <!-- show all FAQs added -->
     <div class="row">
         <div class="offset-md-2 col-md-8">
@@ -100,9 +98,9 @@ $faqs = $statement->fetchAll();
                             <td><?php echo $faq["faq_answer"]; ?></td>
                             <td>
                                 <!-- 編輯按鈕 -->
-                                <a href="edit_faq.php?id=<?php echo $faq['question_id']; ?>" class="btn btn-warning btn-sm mb-3">編輯</a>
+                                <a href="faq_edit.php?id=<?php echo $faq['question_id']; ?>" class="btn btn-warning btn-sm mb-3">編輯</a>
                                 <!-- 刪除表單 -->
-                                <form method="POST" action="delete_faq.php" onsubmit="return confirm('確定要刪除這個FAQ?');">
+                                <form method="POST" action="faq_delete.php" onsubmit="return confirm('確定要刪除這個FAQ?');">
                                     <input type="hidden" name="id" value="<?php echo $faq['question_id']; ?>" required />
                                     <input type="submit" value="刪除" class="btn btn-danger btn-sm" />
                                 </form>

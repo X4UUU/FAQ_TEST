@@ -4,7 +4,7 @@
       <div class="sb-sidenav-menu">
         <div class="nav">
           <div class="sb-sidenav-menu-heading">會員專區</div>
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="/table.html">
             <div class="sb-nav-link-icon">
               <i class="fas fa-tachometer-alt"></i>
             </div>
@@ -71,7 +71,7 @@
             </div>
             注意事項
           </a>
-          <a class="nav-link collapsed" href="add_faq.php" data-bs-toggle="collapse" data-bs-target="#heartContentCollapse" aria-expanded="false" aria-controls="heartContentCollapse">
+          <a class="nav-link collapsed" href="faq_add.php" data-bs-toggle="collapse" data-bs-target="#heartContentCollapse" aria-expanded="false" aria-controls="heartContentCollapse">
             <div class="sb-nav-link-icon">
               <i class="fas fa-book-open"></i>
             </div>
